@@ -1,0 +1,13 @@
+@use '_functions' as *;
+
+:root {
+    --accent-color-primary: rgb(149, 226, 250);
+    --accent-color-secondary: rgb(249, 250, 226);
+    --section-bdrd: rem(10);
+}
+
+[class*='__container'] {
+    max-width: calc(rem(1298) + 15px * 2);
+    padding: 0 15px;
+    margin: 0 auto;
+}
