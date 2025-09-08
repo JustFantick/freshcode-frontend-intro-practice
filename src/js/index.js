@@ -34,6 +34,8 @@ function initMenuBurger() {
     nav.addEventListener('click', function (e) {
         if (e.target === nav) {
             closeMenu();
+        } else if (e.target.closest('li, button')) {
+            closeMenu();
         }
     });
 
