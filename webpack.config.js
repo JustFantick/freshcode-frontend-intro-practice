@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
@@ -31,7 +32,7 @@ module.exports = (env, argv) => {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'images/[name][ext]',
+                        filename: 'assets/[name][ext]',
                     },
                 },
                 {
@@ -47,6 +48,14 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './src/index.html',
                 filename: 'index.html',
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: 'src/assets',
+                        to: 'assets',
+                    },
+                ],
             }),
             ...(isProduction
                 ? [
