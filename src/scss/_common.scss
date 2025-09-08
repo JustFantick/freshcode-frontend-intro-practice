@@ -32,4 +32,9 @@ button.button {
     line-height: 0.97;
     text-align: center;
     text-transform: uppercase;
+
+    &._btn-v2 {
+        background-color: white;
+        color: black;
+    }
 }

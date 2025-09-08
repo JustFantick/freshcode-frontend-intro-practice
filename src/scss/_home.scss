@@ -1,0 +1,95 @@
+@use '_functions' as *;
+
+.home-screen {
+    position: relative;
+    min-height: 100dvh;
+    min-height: 100vh;
+    background-color: rgb(166, 208, 220);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        ._content-img {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            // Extra overlay for text readability
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(166, 208, 220);
+                opacity: 0.35;
+                z-index: 2;
+                pointer-events: none;
+            }
+
+            ._bg-img {
+                display: none;
+            }
+
+            ._content-img {
+                display: block;
+                filter: blur(5px);
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+
+        color: white;
+
+        & > * {
+            align-self: flex-start;
+        }
+
+        h1 {
+            font-size: clamp(2rem, calc(0.85rem + 4.34vw), 3.94rem); // 425-1140px | 32-63px
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+
+            max-width: 12ch;
+        }
+
+        p {
+            font-size: clamp(1.13rem, calc(1.05rem + 0.28vw), 1.25rem); // 425-1140px | 18-20px
+            line-height: 1.2;
+            max-width: 33ch;
+        }
+
+        @media (max-width: 1024px) {
+            & *:not(button) {
+                text-shadow: 0 rem(2) rem(5) rgba(0, 0, 0, 0.55);
+            }
+        }
+    }
+}
