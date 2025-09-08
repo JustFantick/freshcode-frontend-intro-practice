@@ -71,18 +71,11 @@
         }
 
         h1 {
-            font-size: clamp(2rem, calc(0.85rem + 4.34vw), 3.94rem); // 425-1140px | 32-63px
-            font-weight: 800;
-            line-height: 0.95;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-
             max-width: 12ch;
         }
 
         p {
             font-size: clamp(1.13rem, calc(1.05rem + 0.28vw), 1.25rem); // 425-1140px | 18-20px
-            line-height: 1.2;
             max-width: 33ch;
         }
 
