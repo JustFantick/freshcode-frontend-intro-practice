@@ -6,8 +6,30 @@
     --section-bdrd: rem(10);
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+}
+
 [class*='__container'] {
     max-width: calc(rem(1298) + 15px * 2);
     padding: 0 15px;
     margin: 0 auto;
+}
+
+button.button {
+    background-color: var(--accent-color-primary);
+    border-radius: rem(50);
+    padding: rem(21) rem(35);
+
+    color: black;
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: 0.97;
+    text-align: center;
+    text-transform: uppercase;
 }

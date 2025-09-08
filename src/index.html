@@ -3,24 +3,46 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hope Fund - Допомога тим, хто потребує</title>
+        <title>Freshcode - Practice project</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <header class="header">
-            <div class="container">
-                <div class="header__content">
-                    <div class="logo">
-                        <h1>Hope Fund</h1>
-                    </div>
-
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li><a href="#about" class="nav__link">Про нас</a></li>
-                            <li><a href="#help" class="nav__link">Допомогти</a></li>
-                            <li><a href="#contact" class="nav__link">Контакти</a></li>
-                        </ul>
-                    </nav>
+            <div class="header__container">
+                <div class="logo">
+                    <img src="./assets/logo.svg" alt="Logo" />
                 </div>
+
+                <nav class="nav" id="nav">
+                    <ul class="nav__list">
+                        <li> <a href="#about">Контакти</a> </li>
+                        <li> <a href="#help">Головна</a> </li>
+                        <li> <a href="#contact">З чим ми працюємо</a> </li>
+                    </ul>
+
+                    <button type="button" class="button"> Підтримати фонд </button>
+                </nav>
+
+                <button type="button" class="menu-burger" id="menu-burger">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg
+                        width="800px"
+                        height="800px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
             </div>
         </header>
 
