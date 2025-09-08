@@ -163,3 +163,69 @@ section {
         }
     }
 }
+
+.donate-section {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1.25rem, calc(0.14rem + 4.2vw), 3.13rem); // 425-1140px | 20-50px
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+        text-align: center;
+
+        @media (max-width: 1024px) {
+            gap: rem(10);
+        }
+
+        *._highlighted {
+            color: rgba(115, 166, 177, 1);
+        }
+    }
+
+    .donate-counter-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(15);
+
+        @media (max-width: 1024px) {
+            gap: rem(10);
+        }
+
+        .donate-counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(13);
+
+            height: rem(72);
+
+            &__part {
+                font-size: rem(60);
+                line-height: 1.2;
+                font-weight: 400;
+                letter-spacing: -0.02em;
+                text-align: center;
+            }
+
+            &__separator {
+                height: 86%;
+                width: rem(2);
+                background-color: rgba(154, 210, 222, 1);
+            }
+
+            @media (max-width: 768px) {
+                height: rem(54);
+
+                &__part {
+                    font-size: rem(40);
+                }
+            }
+        }
+    }
+}
