@@ -2,6 +2,7 @@ import '../scss/main.scss';
 
 document.addEventListener('DOMContentLoaded', function () {
     initMenuBurger();
+    initAnchors();
 });
 
 function initMenuBurger() {
@@ -40,5 +41,25 @@ function initMenuBurger() {
         if (e.key === 'Escape' && nav.classList.contains('nav--active')) {
             closeMenu();
         }
+    });
+}
+
+function initAnchors() {
+    const anchorElements = document.querySelectorAll('button[data-anchor], a[data-anchor]');
+
+    anchorElements.forEach(element => {
+        element.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetSelector = this.getAttribute('data-anchor');
+            const targetElement = document.querySelector(targetSelector);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            }
+        });
     });
 }

@@ -21,9 +21,9 @@
 
                 <nav class="nav" id="nav">
                     <ul class="nav__list">
-                        <li> <a href="#about">Контакти</a> </li>
-                        <li> <a href="#help">Головна</a> </li>
-                        <li> <a href="#contact">З чим ми працюємо</a> </li>
+                        <li> <a href="#about" data-anchor="#footer">Контакти</a> </li>
+                        <li> <a href="#help" data-anchor="#home">Головна</a> </li>
+                        <li> <a href="#contact" data-anchor="#activities-section">З чим ми працюємо</a> </li>
                     </ul>
 
                     <button type="button" class="button"> Підтримати фонд </button>
@@ -47,7 +47,7 @@
         </header>
 
         <main>
-            <section class="home-screen">
+            <section class="home-screen" id="home">
                 <div class="home-screen__background">
                     <img src="assets/home-img-original.png" alt="Home bg img" class="_bg-img" />
                     <img src="assets/home-content-img-origin.jpg" alt="Home content img" class="_content-img" />
@@ -68,7 +68,7 @@
                 </div>
             </section>
 
-            <section class="activities-section _section-padding-bottom">
+            <section class="activities-section _section-padding-bottom" id="activities-section">
                 <div class="activities-section__container">
                     <div class="cards-list">
                         <div class="cards-list__item">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <button type="button" class="button"> Дізнатися більше </button>
+                    <button type="button" class="button" data-anchor="#footer"> Дізнатися більше </button>
                 </div>
             </section>
 
@@ -146,7 +146,7 @@
                         </div>
                     </div>
 
-                    <button type="button" class="button"> Дізнатися більше </button>
+                    <button type="button" class="button" data-anchor="#footer"> Дізнатися більше </button>
                 </div>
             </section>
         </main>
